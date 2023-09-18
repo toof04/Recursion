@@ -1,3 +1,37 @@
+solution 1:
+#include <bits/stdc++.h>
+using namespace std;
+
+int recur(int current , int top, int steps) {
+    if(current == top){
+        return 0;
+    }
+    if(current>top){
+        return INT_MAX;
+    }
+    return  1 + min(recur(current+1,top,steps+1),recur(current+2,top,steps+2));
+          
+    }
+    
+
+
+int main() {
+    int n = 5;
+    int minimum = recur(0,n,0);
+    
+    cout<<"min number of steps you have to take to reach the top: "<<minimum;
+ 
+
+}
+
+
+--------------------------------------------------------------
+
+solution 2:
+
+
+
+
 #include <bits/stdc++.h>
 using namespace std;
 
